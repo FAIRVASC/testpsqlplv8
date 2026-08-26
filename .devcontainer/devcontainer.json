@@ -1,9 +1,11 @@
 {
   "name": "Postgres+plv8",
-  "image": "sibedge/postgres-plv8",
-  "customizations": {
-    "vscode": {
-      "extensions": []
-    }
-  }
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "POSTGRES_PASSWORD": "mysecretpassword",
+    "POSTGRES_DB": "postgres"
+  },
+  "postStartCommand": "/usr/sbin/sshd && docker-entrypoint.sh postgres &"
 }
