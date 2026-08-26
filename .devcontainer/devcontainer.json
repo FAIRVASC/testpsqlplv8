@@ -1,12 +1,10 @@
 {
-  "name": "Postgres+plv8",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "remoteUser": "root",
-  "containerEnv": {
-    "POSTGRES_PASSWORD": "mysecretpassword",
-    "POSTGRES_DB": "postgres"
-  },
-  "postStartCommand": "docker-entrypoint.sh postgres &"
+  "name": "Postgres+plv8 Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  }
 }
