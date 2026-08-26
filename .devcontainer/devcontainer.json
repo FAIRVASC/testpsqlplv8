@@ -1,0 +1,14 @@
+{
+  "name": "Postgres+plv8",
+  "image": "sibedge/postgres-plv8",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}
