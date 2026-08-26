@@ -3,9 +3,10 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "remoteUser": "root",
   "containerEnv": {
     "POSTGRES_PASSWORD": "mysecretpassword",
     "POSTGRES_DB": "postgres"
   },
-  "postStartCommand": "/usr/sbin/sshd && docker-entrypoint.sh postgres &"
+  "postStartCommand": "docker-entrypoint.sh postgres &"
 }
